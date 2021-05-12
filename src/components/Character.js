@@ -1,12 +1,12 @@
-function Character(props) {
+function Character({character}) {
 
     return <section>
         <h3>
-            {props.name}
+            {character.name}
         </h3>
-        <img src="" alt=""/>
+        <img src={character.image}/>
         <p>
-            {props.description}
+            {character.species}
         </p>
     </section>
 }
