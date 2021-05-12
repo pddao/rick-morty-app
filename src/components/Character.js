@@ -1,12 +1,14 @@
-function Character() {
-    return (
-        <div>
-            <img src="" alt=""/>
+function Character(props) {
 
-
-
-
-
-    </div>);
+    return <section>
+        <h3>
+            {props.name}
+        </h3>
+        <img src="" alt=""/>
+        <p>
+            {props.description}
+        </p>
+    </section>
 }
-    export default Character;
+
+export default Character;
