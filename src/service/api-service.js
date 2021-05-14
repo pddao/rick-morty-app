@@ -5,15 +5,8 @@ import axios from "axios";
 //    (characterData) => characterData.json()
 //  );
 //}
-export function loadCharacters() {
+export function loadCharacters(page) {
   return axios
-    .get("https://rickandmortyapi.com/api/character")
-    .then((characterData) => {
-      return characterData.data;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+    .get("https://rickandmortyapi.com/api/character?page=" + page)
+    .then((response) => response.data);
 }
-
-export default loadCharacters;
